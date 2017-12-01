@@ -15,12 +15,7 @@ void Challenge_01::P1()
 	int total = 0;
 	for (int i = 0; i < input.length(); ++i)
 	{
-		char next;
-		if (i == input.length() - 1)
-			next = input[0];
-		else
-			next = input[i + 1];
-
+		char next = input[(i + 1) % input.length()];
 		if (input[i] == next)
 			total += input[i] - '0';
 	}
@@ -35,7 +30,6 @@ void Challenge_01::P2()
 	for (int i = 0; i < input.length(); ++i)
 	{
 		char next = input[(i + jump) % input.length()];
-
 		if (input[i] == next)
 			total += input[i] - '0';
 	}
