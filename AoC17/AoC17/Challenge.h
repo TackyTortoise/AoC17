@@ -3,6 +3,8 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <vector>
+#include <regex>
 
 using namespace std;
 
@@ -14,20 +16,39 @@ public:
 	virtual void Run() = 0;
 
 protected:
-	std::string TxtFileToString(const char* filePath);
+	string TxtFileToString(const char* filePath) const;
+	vector<string> TxtFileGetLines(const char* filePath) const;
 
 private:
 	Challenge(const Challenge& o) = delete;
 	Challenge& operator= (const Challenge& o) = delete;
 };
 
-inline std::string Challenge::TxtFileToString(const char* filePath)
+inline string Challenge::TxtFileToString(const char* filePath) const
 {
-	std::ifstream file(filePath);
+	ifstream file(filePath);
 	if (!file.is_open())
 		return false;
-	std::stringstream r;
+	stringstream r;
 	r << file.rdbuf();
 	auto s = r.str();
 	return s;
+}
+
+inline vector<string> Challenge::TxtFileGetLines(const char* filePath) const
+{
+	vector<string> inputs;
+	ifstream input(filePath);
+	if (input.is_open())
+	{
+		string line;
+		while (getline(input, line))
+		{
+			inputs.push_back(line);
+		}
+	}
+	else
+		cout << "Failed to open " << filePath << endl;
+
+	return inputs;
 }
