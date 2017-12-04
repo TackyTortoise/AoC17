@@ -1,10 +1,11 @@
 #pragma once
 #include "../Challenge.h"
-class Challenge_01 :public Challenge
+
+class Challenge_05 : public Challenge
 {
 public:
-	Challenge_01();
-	~Challenge_01();
+	Challenge_05();
+	~Challenge_05();
 	void Run() override;
 
 private:

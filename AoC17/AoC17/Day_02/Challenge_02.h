@@ -10,7 +10,7 @@ public:
 	void Run() override;
 
 private:
-	void P1();
-	void P2();
+	void P1() override;
+	void P2() override;
 };
 
