@@ -14,8 +14,6 @@ void Challenge_04::P1()
 {
 	auto input = TxtFileGetLines("./Day_04/Input_04.txt");
 	int totalValid = 0;
-	regex rgx("[\\a+]");
-	smatch sm;
 	for (int i = 0; i < input.size(); ++i)
 	{
 		vector<string> found;

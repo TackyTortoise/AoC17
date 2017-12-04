@@ -19,9 +19,10 @@ protected:
 	string TxtFileToString(const char* filePath) const;
 	vector<string> TxtFileGetLines(const char* filePath) const;
 	vector<string> SplitString(const string& str, char splitChar) const;
+	vector<string> SplitStringRgx(const string& str) const;
 
-	virtual void P1();
-	virtual void P2();
+	virtual void P1() {}
+	virtual void P2() {}
 
 private:
 	Challenge(const Challenge& o) = delete;
@@ -72,3 +73,19 @@ inline vector<string> Challenge::SplitString(const string& str, char splitChar) 
 	result.push_back(copyStr);
 	return result;
 }
+
+inline vector<string> Challenge::SplitStringRgx(const string& str) const
+{
+	vector<string> result;
+	string copyStr = str;
+	regex rgx("\\b\\w+\\b");
+	smatch sm;
+	while (regex_search(copyStr, sm, rgx))
+	{
+		result.push_back(sm[0].str());
+		copyStr = sm.suffix();
+	}
+	return result;
+}
+
+
