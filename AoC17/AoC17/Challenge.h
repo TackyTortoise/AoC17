@@ -78,7 +78,7 @@ inline vector<string> Challenge::SplitStringRgx(const string& str) const
 {
 	vector<string> result;
 	string copyStr = str;
-	regex rgx("\\b\\w+\\b");
+	regex rgx("\\w+");
 	smatch sm;
 	while (regex_search(copyStr, sm, rgx))
 	{
