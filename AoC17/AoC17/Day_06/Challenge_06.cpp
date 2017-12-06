@@ -1,6 +1,6 @@
 #include "Challenge_06.h"
 
-Challenge_06::Challenge_06(){}
+Challenge_06::Challenge_06(){} 
 
 Challenge_06::~Challenge_06(){}
 
