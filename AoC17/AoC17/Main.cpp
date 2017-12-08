@@ -1,3 +1,7 @@
+#define _CRTDBG_MAP_ALLOC  
+#include <stdlib.h>  
+#include <crtdbg.h>  
+
 #include "Day_01/Challenge_01.h"
 #include "Day_02/Challenge_02.h"
 #include "Day_03/Challenge_03.h"
@@ -9,6 +13,7 @@
 
 int main()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	Challenge* c = new Challenge_08();
 	c->Run();
 	cin.get();

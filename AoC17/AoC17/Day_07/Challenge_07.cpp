@@ -67,6 +67,13 @@ void Challenge_07::P1()
 	auto it = find_if(programs.begin(), programs.end(), [](Program* p) {return p->parent == nullptr; });
 	auto ind = it - programs.begin();
 	cout << programs[ind]->name << endl;
+
+	for (auto& p : programs)
+	{
+		delete p;
+		p = nullptr;
+	}
+	programs.clear();
 }
 
 void Challenge_07::P2()
@@ -171,4 +178,10 @@ void Challenge_07::P2()
 		}
 	}
 	cout << programs[ind]->name << endl;
+	for (auto& p : programs)
+	{
+		delete p;
+		p = nullptr;
+	}
+	programs.clear();
 }

@@ -93,6 +93,13 @@ void Challenge_08::P1()
 
 	auto maxValue = max_element(m_Regs.begin(), m_Regs.end(), [](Registery* r, Registery* o) {return r->value < o->value; });
 	cout << "Max value: " << m_Regs[maxValue - m_Regs.begin()]->value << endl;
+
+	for(auto& reg:m_Regs)
+	{
+		delete reg;
+		reg = nullptr;
+	}
+	m_Regs.clear();
 }
 
 void Challenge_08::P2()
@@ -182,4 +189,10 @@ void Challenge_08::P2()
 	}
 
 	cout << "Max value: " << maxValue << endl;
+	for (auto& reg : m_Regs)
+	{
+		delete reg;
+		reg = nullptr;
+	}
+	m_Regs.clear();
 }
