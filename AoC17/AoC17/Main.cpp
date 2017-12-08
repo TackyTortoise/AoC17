@@ -5,10 +5,11 @@
 #include "Day_05/Challenge_05.h"
 #include "Day_06/Challenge_06.h"
 #include "Day_07/Challenge_07.h"
+#include "Day_08/Challenge_08.h"
 
 int main()
 {
-	Challenge* c = new Challenge_07();
+	Challenge* c = new Challenge_08();
 	c->Run();
 	cin.get();
 	delete c;
