@@ -10,5 +10,6 @@ public:
 protected:
 	void P1() override;
 	void P2() override;
+	void ConvertASCIIToBytes(const string& input, vector<int>& output);
 };
 
