@@ -10,5 +10,13 @@ public:
 protected:
 	void P1() override;
 	void P2() override;
+
+private:
+	struct HexTile
+	{
+		HexTile(int X, int Y): x(X), y(Y){}
+		int x = 0;
+		int y = 0;
+	};
 };
 
