@@ -10,5 +10,17 @@ public:
 protected:
 	void P1() override;
 	void P2() override;
+
+private:
+	struct Pipe
+	{
+		Pipe(int id):pipeId(id){}
+		int pipeId;
+		vector<Pipe*> connectedPipes;
+	};
+
+	vector<Pipe*> m_Pipes;
+
+	void GetPipeChildCount(const Pipe* pipe, vector<const Pipe*>& checked);
 };
 
