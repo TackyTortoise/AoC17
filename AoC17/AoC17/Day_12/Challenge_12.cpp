@@ -36,13 +36,19 @@ void Challenge_12::P1()
 	vector<const Pipe*> checked;
 	GetPipeChildCount(m_Pipes[0], checked);
 	cout << checked.size() << endl;
+
+	for(auto p : m_Pipes)
+	{
+		delete p;
+		p = nullptr;
+	}
+	m_Pipes.clear();
 }
 
 void Challenge_12::P2()
 {
 	auto input = TxtFileGetLines("./Day_12/Input_12.txt");
 
-	m_Pipes.clear();
 	for (size_t i = 0; i < input.size(); ++i)
 	{
 		m_Pipes.push_back(new Pipe(i));
@@ -80,6 +86,13 @@ void Challenge_12::P2()
 	} while (m_Pipes.size() > 0);
 
 	cout << groups << endl;
+
+	for (auto p : m_Pipes)
+	{
+		delete p;
+		p = nullptr;
+	}
+	m_Pipes.clear();
 }
 
 void Challenge_12::GetPipeChildCount(const Pipe* pipe, vector<const Pipe*>& checked)
