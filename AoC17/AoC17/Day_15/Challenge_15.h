@@ -10,5 +10,16 @@ public:
 protected:
 	void P1() override;
 	void P2() override;
+
+private:
+	struct Generator
+	{
+		Generator(long long f):factor(f){}
+		long long factor;
+		long long GenerateNumber(long long input)
+		{
+			return long long(input * factor % 2147483647);
+		}
+	};
 };
 
