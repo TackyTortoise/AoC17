@@ -6,6 +6,7 @@
 #include <vector>
 #include <regex>
 #include <set>
+#include <algorithm>
 
 using namespace std;
 

@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Day_22\Challenge_22.cpp" />
     <ClCompile Include="Day_21\Challenge_21.cpp" />
     <ClCompile Include="Day_20\Challenge_20.cpp" />
     <ClCompile Include="Day_19\Challenge_19.cpp" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenge.h" />
+    <ClInclude Include="Day_22\Challenge_22.h" />
     <ClInclude Include="Day_21\Challenge_21.h" />
     <ClInclude Include="Day_20\Challenge_20.h" />
     <ClInclude Include="Day_19\Challenge_19.h" />
