@@ -87,6 +87,9 @@
     <ClCompile Include="Day_23\Challenge_23.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Day_24\Challenge_24.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Challenge.h">
@@ -159,6 +162,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Day_23\Challenge_23.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day_24\Challenge_24.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
