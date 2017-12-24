@@ -26,11 +26,12 @@
 #include "Day_22/Challenge_22.h"
 #include "Day_23/Challenge_23.h"
 #include "Day_24/Challenge_24.h"
+#include "Day_25/Challenge_25.h"
 
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	Challenge* c = new Challenge_24();
+	Challenge* c = new Challenge_25();
 	c->Run();
 	cin.get();
 	delete c;
